@@ -40,7 +40,7 @@ class TodoResourceTest {
     @Test
     @Order(1)
     void testInitialItems() {
-        List<Todo> todos = get("/api").then()
+        List<Todo> todos = get("/apix").then()
                 .statusCode(HttpStatus.SC_OK)
                 .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON)
                 .extract().body().as(getTodoTypeRef());
